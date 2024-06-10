@@ -163,18 +163,65 @@ textarea {
 .chatbot-container {
   background-image: var(--chatbot-container-bg-image);
   background-color: var(--chatbot-container-bg-color);
-  font-family:
-    'Open Sans',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol';
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  width: 100%; /* Default width for small devices */
+  max-width: 360px; /* Limit max width for small devices */
+  margin: auto; /* Center the container */
+}
+
+/* Responsive styles */
+/* Medium devices (tablets, 720px) */
+@media (min-width: 361px) and (max-width: 720px) {
+  .chatbot-container {
+    max-width: 720px; /* Adjust container width for medium devices */
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .chatbot-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .chatbot-input {
+    font-size: 16px;
+  }
+}
+
+/* Large devices (desktops, 1200px) */
+@media (min-width: 721px) and (max-width: 1200px) {
+  .chatbot-container {
+    max-width: 1200px; /* Adjust container width for large devices */
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .chatbot-button {
+    padding: 15px;
+    font-size: 18px;
+  }
+
+  .chatbot-input {
+    font-size: 18px;
+  }
+}
+
+/* Extra large devices (wide desktops) */
+@media (min-width: 1201px) {
+  .chatbot-container {
+    max-width: 90%; /* Set a relative max width for very large screens */
+    padding: 30px;
+    font-size: 20px;
+  }
+
+  .chatbot-button {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .chatbot-input {
+    font-size: 20px;
+  }
 }
 
 .file-annotation-button {
